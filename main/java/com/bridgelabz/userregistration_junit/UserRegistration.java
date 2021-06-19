@@ -1,10 +1,9 @@
 /**************************************************
-	 * Purpose : Validating the User Details
-	 * @author : Rosy Rupali
-	 * @since  : 18-06-2021
-	 * @version : 1.0
-	 *
-	 *************************************************/
+* Purpose : Validating the User Details
+* @author : Rosy Rupali
+* @since  : 18-06-2021
+* @version : 1.0
+ *************************************************/
 package com.bridgelabz.userregistration_junit;
 
 import java.util.Scanner;
@@ -34,7 +33,7 @@ public class UserRegistration {
 	/**
 	 * UC-2 This method is validating the last name of the user is correct or not.
 	 */
-	public static boolean validateLastName(String name) {
+	public boolean validateLastName(String name) {
 		String regex = "^[A-Z][a-z]{2,}";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(name);
@@ -51,7 +50,7 @@ public class UserRegistration {
 	/**
 	 * UC-3 This method is validating the email id of the user is correct or not.
 	 */
-	public static boolean validateEmail(String emailId) {
+	public boolean validateEmail(String emailId) {
 		String regex = "^[a-z0-9.+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,6}$";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(emailId);
@@ -69,9 +68,8 @@ public class UserRegistration {
 	/**
 	 * UC-4 This method is validating the Mobile number of the user is correct or
 	 * not.
-	 * 
 	 */
-	public static boolean validateMobileNo(String mobileNumber) {
+	public boolean validateMobileNo(String mobileNumber) {
 		String regex = "[0-9]{2}\\s{1}[0-9]{10}";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(mobileNumber);
@@ -99,7 +97,7 @@ public class UserRegistration {
 	 * UC-8 This method is validating the third rule of password of the user is
 	 * correct or not. It should contain one special character.
 	 */
-	public static boolean validatePassword(String password) {
+	public boolean validatePassword(String password) {
 		String regex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(password);
